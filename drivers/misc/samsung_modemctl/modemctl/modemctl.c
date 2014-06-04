@@ -486,6 +486,7 @@ static ssize_t show_phoneactive(struct device *d,
 static ssize_t show_debug(struct device *d,
 		struct device_attribute *attr, char *buf)
 {
+	/*
 	char *p = buf;
 	int i;
 	struct modemctl *mc = dev_get_drvdata(d);
@@ -528,8 +529,8 @@ static ssize_t show_debug(struct device *d,
 		}
 		p += sprintf(p, "%s\n", mdmctl_info[i].name);
 	}
-
-	return p - buf;
+*/
+	return 0;
 }
 
 static void mc_work(struct work_struct *work)
